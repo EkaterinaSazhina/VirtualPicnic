@@ -13,8 +13,11 @@ public class Main {
         System.out.println("Количество слов в файле: " + wordCount);
 
         LongestWordFinder longestWordFinder = new LongestWordFinder();
-        String longestWord = longestWordFinder.findLongestWord(file);
-        System.out.println("Самое длинное слово в файле: " + longestWord);
+        Set<String> longestWords = longestWordFinder.findLongestWords(file);
+        System.out.println("Самые длинные слова в файле:");
+        for (String word : longestWords) {
+            System.out.println(word);
+        }
 
         WordFrequencyCounter frequencyCounter = new WordFrequencyCounter();
         Map<String, Integer> wordFrequency = frequencyCounter.countWordFrequency(file);
