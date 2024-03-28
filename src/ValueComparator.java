@@ -13,9 +13,9 @@ public class ValueComparator implements Comparator<String> {
         int value1 = map.get(key1);
         int value2 = map.get(key2);
         if (value1 == value2) {
-            return key2.compareTo(key1); // сортировка по алфавиту в случае одинаковой встречаемости
+            return key2.compareTo(key1);
         } else {
-            return value2 - value1; // сортировка по встречаемости в убывающем порядке
+            return value2 - value1;
         }
     }
 }
